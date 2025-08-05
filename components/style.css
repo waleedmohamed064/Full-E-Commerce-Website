@@ -1,0 +1,120 @@
+/* General Code CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* Top bar CSS */
+.adv{
+    background-color: #000000;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    font-weight:300;
+    padding: 12px 0;
+    align-items: center;
+
+}
+
+.adv p{
+    color: #FAFAFA;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-left: 445px;
+}
+
+.adv a{
+    color: #FAFAFA;
+    font-size: 14px;
+    font-weight:600;
+    margin-left: 8px;
+    text-decoration: underline;
+}
+
+.adv .lang{
+    margin-left: 231px;
+    font-size: 14px;
+}
+
+.adv .icon{
+    margin-left: 5px;
+}
+
+
+
+
+/* Header CSS */
+header{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    height:94px;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+
+.logo{
+ font-size: 24px;
+ font-weight:bold;
+ margin-left: 135px;
+ margin-top: 70px;
+}
+
+
+.mid-section{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  justify-content: space-evenly;
+  margin-top: 70px;
+  gap: 48px;
+  color: #000000;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 70px;
+  margin-right: 135px;
+}
+
+.search-box {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search-box i {
+  color: gray;
+  margin-left: 30px;
+}
+
+
+
+
