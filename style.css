@@ -9,13 +9,6 @@
     scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-
-
 /* Top bar CSS */
 .adv{
     background-color: #000000;
@@ -54,67 +47,80 @@ a{
     margin-left: 5px;
 }
 
-
-
-
-/* Header CSS */
 header{
-    width: 100%;
-    display: flex;
-    position: fixed;
-    z-index: 1000;
-    align-items: center;
-    height:94px;
-    justify-content: space-between;
-    padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 100px 90px;
 }
 
-
-.logo{
- font-size: 24px;
- font-weight:bold;
- margin-left: 135px;
- margin-top: 70px;
+.left-section{
+  display: flex;
+  align-items: center;
 }
 
+.left-section .logo{
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: -5%;
+}
 
 .mid-section{
   display: flex;
   align-items: center;
-  font-size: 16px;
   justify-content: space-evenly;
-  margin-top: 70px;
-  gap: 48px;
-  color: #000000;
+  margin-right: -5%;
 }
 
-.search-cart {
+.mid-section nav a{
+  text-decoration: none;
+  color: black;
+  padding-right: 48px;
+
+}
+
+.mid-section2{
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-top: 70px;
-  margin-right: 135px;
+  margin-right: -15%;
 }
 
-.search-box {
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  border-radius: 5px;
+.mid-section2 form{
   display: flex;
-  align-items: center;
+  width: 243px;
+  height: 38px;
 }
 
-.search-box input {
-  border: none;
-  outline: none;
-  padding: 5px;
+.mid-section2 input{
+  width: 100%;
+  border-radius: 2px 0 0 2px;
+  padding: 12px;
+  font-size: 12px;
+  border: 1px solid #d3d3d3;
+  background-color: #F5F5F5;
+  border-right: none;
 }
 
-.search-box i {
-  color: gray;
+.mid-section2 button{
+  width: 64px;
+  border: 1px solid #d3d3d3;
+  border-radius: 0 2px 2px 0;
+  padding-top: 4px;
+  background-color: #F5F5F5;
+  border-left: none;
+  cursor: pointer;
+}
+
+.mid-section2 button:hover{
+  border-color: #c6c6c6;
+  background-color: #f0f0f0;
+}
+
+.right-section .icons{
   margin-left: 30px;
 }
-
-
-
+.right-section a{
+  margin-left: 16px;
+}
 
