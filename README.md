@@ -4,7 +4,7 @@ https://www.figma.com/design/XoTfoCsMK3xGHlxxqlaEBi/Full-E-Commerce-Website-UI-U
 | Number | Name | Page |
 |-------|------------|------------|
 |44|Waleed mohamed waleed|manage_my_account|
-|26|mohamed salim mohamed |CheckOut|
+|26|mohamed salim mohamed |billing|
 |10|Aya Hassan Ahmed Hassan|Product Details page|
 |28|Nabil Mohamed Nabil|About|
 |40|Shahd Ayman Salem|Wishlist|
