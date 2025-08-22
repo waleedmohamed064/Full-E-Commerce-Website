@@ -1,0 +1,540 @@
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+   --white_Primary: #FFFFFF;
+   --black_Primary:#363738;
+   --secondary_color:#F5F5F5;
+   --secondary1_color:#FEFAF1;
+   --secondary2_color:#DB4444;
+   --background_color:#FFFFFF;
+   --text_white:#FAFAFA;
+   --text_grey:#7D8184;
+   --text_black:#000000;
+   --button_black:#000000;
+   --button_green:#00FF66;
+   --button_red:#DB4444;
+   --button_red_hover:#E07575;
+   --button_blue_hover:#A0BCE0;
+   --black_opacity_low:rgba(0, 0, 0,0.25);
+   --grey: #ccc;
+   --orange:#FFAD33;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.topheader {
+  font-size: 14px;
+  width: 100%;
+  height: 48px;
+  background-color: black;
+  color: #fafafa;
+   text-align: center; 
+   margin: 0;  
+   display: flex;
+  padding: 10px; 
+  display: grid;
+  place-items: center;
+}
+.topheader .top-holder {
+  width: 859px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  /* position: absolute;
+  top: 12px;
+  left: 445px; */
+  opacity: 1;
+  gap: 231px;
+}
+.topheader p {
+  display: inline-flex;
+}
+
+.topheader a {
+  color: #fff;
+  /* margin-left: 5px; */
+}
+.topheader select {
+  position: absolute;
+  right: 70px;
+  width: 70px;
+  background-color: #000;
+  color: #fafafa;
+  border: 0;
+}
+.contaniner-head {
+  position: relative;
+}
+.bottom-header {
+  width: 1170px;
+  height: 100px;
+  display: flex;
+  /* justify-items: center; */
+  align-items: center;
+  gap: 130px;
+  background-color: #fff;
+  text-align: center;
+  /* position: absolute;
+  top: 88px;
+  left: 135px; */
+  opacity: 1;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-weight: 100; */
+  font-style: normal;
+  opacity: 1;
+  padding-left: 20px;
+}
+
+.bottomheader h1 {
+  display: flex;
+  /* align-items: center; */
+  width: 118px;
+  height: 24px;
+  opacity: 1;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  /* font-style: Bold; */
+  font-size: 24px;
+  /* leading-trim: none; */
+  /* line-height: 24px; */
+  letter-spacing: 3%;
+}
+.bottom-header h1 a {
+  text-decoration: none;
+  color: #14142b;
+}
+.bottom-header nav {
+  display: flex;
+  gap: 48px;
+  text-align: center;
+  align-items: center;
+  width: 367px;
+  /* height: 24px; */
+}
+.bottom-header nav a {
+  text-decoration: none;
+  height: 24px;
+  /* position: relative; */
+  /* top: 20px; */
+  color: #000000;
+  /* margin: 20px; */
+  font-weight: 400;
+  font-size: 16px;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-style: bold; */
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+a.signup {
+  width: 61px;
+}
+
+.searchBox {
+  display: flex;
+  /* flex-flow: VERTICAL; */
+  width: 243px;
+  height: 38px;
+  border-radius: 4px;
+  padding: 7px 12px 7px 20px;
+  background-color: #f5f5f5;
+  gap: 10px;
+  opacity: 1;
+}
+.searchBox input {
+  width: 211px;
+  height: 24px;
+  border: 0;
+  background-color: #f5f5f5;
+}
+.searchBox button {
+  border: 0;
+  width: 128px;
+}
+/*ul#resultsTop {
+   display: none; 
+}*/
+.right-header {
+  width: 395px;
+  height: 38px;
+  display: flex;
+  gap: 24px;
+  opacity: 1;
+}
+.bottom-header .icon {
+  display: flex;
+  width: 128px;
+  height: 32px;
+  gap: 16px;
+  opacity: 1;
+  /* align-items: center;
+  align-content: center; */
+}
+.bottom-header .icon a {
+  text-decoration: none;
+}
+.bottom-header .icon svg {
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+}
+hr {
+  /* width: 1440px; هنا في مشكلة الخط مش كامل ده اللي جاي من الديزين */
+  width: 100%;
+  height: 0px;
+  opacity: 0.3;
+  border-width: 0.5px;
+  /* position: absolute;
+  top: 142px; */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.checkout-section {
+    padding: 60px 0;
+    background-color: var(--background_color);
+}
+
+.checkout-container {
+    display: flex;
+    gap: 40px;
+}
+
+.billing-details,
+.order-summary {
+    background-color: var(--white_Primary);
+    padding: 20px;
+    border: 1px solid var(--grey);
+    flex: 1;
+}
+
+.billing-details h2,
+.order-summary h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text_black);
+}
+
+.billing-details form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    background-color: var(--secondary_color);
+}
+
+.save-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text_grey);
+    gap: 5px;
+}
+
+.order-summary .summary-items .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.subtotal,
+.shipping,
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary2_color);
+}
+
+.payment-method {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.payment-method label {
+    margin-right: 15px;
+    color: var(--text_black);
+}
+
+.payment-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--black_Primary);
+}
+
+.coupon {
+    display: flex;
+    margin: 15px 0;
+}
+
+.coupon input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 4px 0 0 4px;
+    background-color: var(--secondary_color);
+}
+
+.apply-coupon {
+    padding: 10px 15px;
+    border: 1px solid var(--grey);
+    background-color: var(--secondary_color);
+    color: var(--text_black);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.place-order {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button_red);
+    color: var(--text_white);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.place-order:hover {
+    background-color: var(--button_red_hover);
+}
+.footer {
+  display: grid;
+  /* width: 1440px; */
+  width: 100%;
+  height: 440px;
+  gap: 87px;
+  justify-content: center;
+  position: relative;
+  place-items: center;
+  padding: 20px;
+  /* justify-items: center; */
+
+  /* position: absolute; */
+  position: relative;
+  bottom: 0;
+  opacity: 1;
+  background-color: #000;
+  color: #fff;
+}
+.footer .footer-container {
+  width: 1170px;
+  height: 236px;
+  display: flex;
+  place-items: center;
+  position: relative;
+  opacity: 1;
+  gap: 87px;
+  color: #fafafa;
+  padding: 20px;
+}
+.footer .footer-container .first-col {
+  width: 217px;
+  height: 188px;
+  display: grid;
+  align-items: center;
+  opacity: 1;
+  gap: 24px;
+}
+.footer .footer-container .first-col ul {
+  width: 217px;
+  height: 124px;
+  display: grid;
+  opacity: 1;
+}
+.footer li {
+  list-style-type: none;
+}
+.footer .footer-container .first-col .form {
+  width: 217px;
+  height: 48px;
+  opacity: 1;
+  display: flex;
+  align-content: center;
+  gap: 32px;
+  border-radius: 4px;
+  border: 1.5px solid;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+}
+.footer .footer-container .first-col .form input {
+  width: 130px;
+  height: 24px;
+  opacity: 0.4;
+  background-color: #000;
+  color: #fafafa;
+  border: 0;
+}
+.footer .footer-container .first-col .form button {
+  width: 20px;
+  height: 17px;
+  position: relative;
+  top: 3px;
+  left: 2px;
+  opacity: 1;
+  border-width: 1.5px;
+  color: #fafafa;
+  background-color: #000;
+  border: 0;
+}
+.footer .footer-container .second-col {
+  width: 175px;
+  height: 180px;
+  opacity: 1;
+  display: grid;
+  gap: 24px;
+}
+.footer .footer-container .second-col ul {
+  width: 175px;
+  height: 128px;
+  opacity: 1;
+  display: grid;
+  gap: 16px;
+}
+.footer a {
+  text-decoration-line: none;
+  color: #fafafa;
+}
+.footer .footer-container .third-col {
+  width: 175px;
+  height: 180px;
+  opacity: 1;
+  display: grid;
+  gap: 24px;
+}
+.footer .footer-container .third-col ul {
+  width: 123ps;
+  height: 184px;
+  opacity: 1;
+  display: grid;
+  /* gap: 16px; */
+}
+.footer .footer-container .fourth-col {
+  width: 109px;
+  height: 196px;
+  opacity: 1;
+  display: grid;
+  gap: 24px;
+}
+.footer .footer-container .fourth-col ul {
+  width: 109px;
+  height: 144px;
+  opacity: 1;
+  display: grid;
+  gap: 16px;
+}
+.footer .footer-container .fifth-col {
+  width: 198px;
+  height: 210px;
+  opacity: 1;
+  display: grid;
+  gap: 24px;
+}
+.footer .footer-container .fifth-col h3 {
+  width: 150px;
+  height: 28px;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer .footer-container .fifth-col .section {
+  display: grid;
+  width: 198px;
+  height: 110px;
+  opacity: 1;
+  gap: 8px;
+}
+
+.footer .footer-container .fifth-col .section .p {
+  width: 194px;
+  height: 18px;
+  opacity: 0.7;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+}
+.footer .footer-container .fifth-col .section .install {
+  width: 198px;
+  height: 84px;
+  opacity: 1;
+  display: flex;
+  gap: 15px;
+}
+.footer .footer-container .fifth-col .section .install #qr {
+  width: 76px;
+  height: 76px;
+  border-width: 2.5px;
+}
+.footer .footer-container .fifth-col .section .install .app-play {
+  width: 110px;
+  height: 84px;
+  opacity: 1;
+  display: grid;
+  gap: 4px;
+}
+.footer .footer-container .fifth-col .section .install #playstore {
+  width: 104px;
+  height: 30px;
+  border-radius: 4px;
+  border-width: 0.6px;
+}
+.footer .footer-container .fifth-col .section .install #appstore {
+  width: 104px;
+  height: 34px;
+  border-radius: 4px;
+  border-width: 0.6px;
+}
+.footer .footer-container .fifth-col .socialmedia {
+  width: 168px;
+  height: 24px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.footer .footer-bottom {
+  display: grid;
+  place-items: center;
+  justify-items: center;
+  place-content: center;
+  padding: 20px;
+  width: 100%;
+  height: 40px;
+  opacity: 0.4;
+  bottom: 10px;
+  gap: 16px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.footer .footer-bottom p {
+  width: 337px;
+  height: 24px;
+  opacity: 1;
+  display: flex;
+  gap: 6px;
+  place-items: center;
+  justify-items: center;
+  place-content: center;
+}
