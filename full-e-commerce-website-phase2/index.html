@@ -1,17 +1,281 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<head>
+    <script src="./js/checkout.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <div class="topheader">
+      <div class="top-holder">
+        <p>
+          Summer Sale for All swim Suits And Free Express Delivery - OFF 50%! 
+          <a href="../HomePage/homepage.html">Shop Now</a>
+        </p>
+        <select name="language" id="language">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="zh">Chinese</option>
+          <option value="ru">Russian</option>
+          <option value="pt">Portuguese</option>
+          <option value="hi">Hindi</option>
+          <option value="ja">Japanese</option>
+          <option value="ko">Korean</option>
+          <option value="tr">Turkish</option>
+          <option value="it">Italian</option>
+          <option value="ur">Urdu</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="bottom-header">
+      <h1><a href="#">Exclusive</a></h1>
+      <nav class="topnav">
+        <a href="../HomePage/homepage.html">Home</a>
+        <a href="#">Contact</a>
+        <a href="../about.n/About.html">About</a>
+        <a href="#" class="signup">Sign Up</a>
+      </nav>
+      <div class="right-header">
+        <div class="searchBox">
+          <input oninput="mySearch()" id="search" type="text" placeholder="What are you looking for">
+          <button type="button" id="searchBtnTop" aria-label="Search">
+            <!-- Search icon -->
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 17L13.2 13.2M15.3 8.1C15.3 10 14.6 11.8 13.2 13.2C11.9 14.6 10 15.3 8.1 15.3C6.2 15.3 4.4 14.6 3.1 13.2C1.8 11.9 1 10 1 8.1C1 6.2 1.8 4.4 3.1 3.1C4.4 1.8 6.2 1 8.1 1C10 1 11.9 1.8 13.2 3.1C14.6 4.4 15.3 6.2 15.3 8.1Z" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <ul id="resultsTop"></ul>
+        </div>
+
+        <div class="icon">
+          <a href="../Wishlist/index.html"></a>
+          <a href="#"></a>
+          <a href="../manage_my_account/index.html"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <section class="checkout-section">
+    <div class="container checkout-container">
+      <!-- Billing -->
+      <div class="billing-details">
+        <h2>Billing Details</h2>
+        <form>
+          <input type="text" name="firstName" placeholder="First Name" required>
+          <input type="text" name="companyName" placeholder="Company Name">
+          <input type="text" name="streetAddress" placeholder="Street Address" required>
+          <input type="text" name="apt" placeholder="Apartment, suite, etc. (optional)">
+          <input type="text" name="townCity" placeholder="Town / City" required>
+          <input type="tel" name="phone" placeholder="Phone number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <label class="save-info">
+            <input type="checkbox"> Save this information for faster checkout
+          </label>
+        </form>
+      </div>
+
+      <!-- Order summary -->
+      <div class="order-summary">
+        <h2>Your Order</h2>
+        <div class="summary-items"></div>
+        <div class="subtotal"><span>Subtotal</span> <span>$0</span></div>
+        <div class="shipping"><span>Shipping</span> <span>Free</span></div>
+        <div class="total"><span>Total</span> <span>$0</span></div>
+
+        <div class="payment-method">
+          <label><input type="radio" name="payment" value="bank" checked> Bank</label>
+          <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
+        </div>
+
+        <div class="payment-icons">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+        </div>
+
+        <div class="coupon">
+          <input type="text" placeholder="Coupon Code">
+          <button type="button" class="apply-coupon">Apply Coupon</button>
+        </div>
+
+        <button type="button" class="place-order">Place Order</button>
+      </div>
+    </div>
+  </section>
+  <div class="footer">
+    <!-- your footer  -->
+  </div>
+
+
+<script src="checkout.js"
+    console.log("checkout.js is loaded ✅");
+document.addEventListener('DOMContentLoaded', () => {
+  // --- ELEMENT SELECTION ---
+  const form = document.getElementById('checkout-form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const addressInput = document.getElementById('address');
+  const couponInput = document.getElementById('coupon');
+  const applyCouponBtn = document.getElementById('apply-coupon');
+  const totalDisplay = document.getElementById('total');
+
+  let total = 100;
+  let couponApplied = false;
+
+  // --- FUNCTIONS ---
+  const applyCoupon = () => {
+    const code = couponInput.value.trim().toUpperCase();
+    if (code === 'DISCOUNT10' && !couponApplied) {
+      total = total * 0.9;
+      couponApplied = true;
+      totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+      showAlert('Coupon applied successfully!', 'success');
+    } else if (couponApplied) {
+      showAlert('Coupon has already been applied.', 'warning');
+    } else {
+      showAlert('Invalid coupon code.', 'error');
+    }
+  };
+
+  const validateForm = () => {
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !addressInput.value.trim()) {
+      showAlert('Please fill in all required fields.', 'error');
+      return false;
+    }
+    return true;
+  };
+
+  const placeOrder = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      showAlert('Order placed successfully!', 'success');
+      form.reset();
+      couponInput.value = '';
+      total = 100;
+      couponApplied = false;
+      totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+    }
+  };
+
+  const showAlert = (message, type = 'info') => {
+    const alertBox = document.createElement('div');
+    alertBox.className = `custom-alert alert-${type}`;
+    alertBox.textContent = message;
+
+    alertBox.style.position = 'fixed';
+    alertBox.style.top = '20px';
+    alertBox.style.right = '20px';
+    alertBox.style.padding = '15px 20px';
+    alertBox.style.borderRadius = '5px';
+    alertBox.style.color = '#fff';
+    alertBox.style.zIndex = '1000';
+    alertBox.style.opacity = '0';
+    alertBox.style.transition = 'opacity 0.5s';
+
+    const colors = {
+      success: 'green',
+      error: 'red',
+      warning: 'orange',
+      info: 'blue'
+    };
+    alertBox.style.backgroundColor = colors[type];
+
+    document.body.appendChild(alertBox);
+
+    setTimeout(() => {
+      alertBox.style.opacity = '1';
+    }, 100);
+
+    setTimeout(() => {
+      alertBox.style.opacity = '0';
+      setTimeout(() => alertBox.remove(), 500);
+    }, 3000);
+  };
+
+  // --- EVENT LISTENERS ---
+  applyCouponBtn.addEventListener('click', applyCoupon);
+  form.addEventListener('submit', placeOrder);
+};
+
+ 
+document.addEventListener('DOMContentLoaded'), () => {
+  // --- ELEMENT SELECTION ---
+  const form = document.getElementById('checkout-form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const addressInput = document.getElementById('address');
+  const couponInput = document.getElementById('coupon');
+  const applyCouponBtn = document.getElementById('apply-coupon');
+  const totalDisplay = document.getElementById('total');
+
+  let total = 100;
+  let couponApplied = false;
+
+  // --- FUNCTIONS ---
+  const applyCoupon = () => {
+    const code = couponInput.value.trim().toUpperCase();
+    if (code === 'DISCOUNT10' && !couponApplied) {
+      total = total * 0.9;
+      couponApplied = true;
+      totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+      showAlert('Coupon applied successfully!', 'success');
+    } else if (couponApplied) {
+      showAlert('Coupon has already been applied.', 'warning');
+    } else {
+      showAlert('Invalid coupon code.', 'error');
+    }
+  };
+
+  const validateForm = () => {
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !addressInput.value.trim()) {
+      showAlert('Please fill in all required fields.', 'error');
+      return false;
+    }
+    return true;
+  };
+
+  const placeOrder = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      showAlert('Order placed successfully!', 'success');
+      form.reset();
+      couponInput.value = '';
+      total = 100;
+      couponApplied = false;
+      totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+    }
+  };
+
+  const showAlert = (message, type = 'info') => {
+    const alertBox = document.createElement('div');
+    alertBox.className = `custom-alert alert-${type}`;
+    alertBox.textContent = message;
+
+    alertBox.style.position = 'fixed';
+    alertBox.style.top = '20px';
+    alertBox.style.right = '20px';
+    alertBox.style.padding = '15px 20px';
+    alertBox.style.borderRadius = '5px';
+    alertBox.style.color = '#fff';
+    alertBox.style.zIndex = '1000';
+    alertBox.style.op
+  }
+  
+}
+
+
+  </script>
+</body>
 </html>
